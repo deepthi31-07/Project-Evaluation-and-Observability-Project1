@@ -1,2 +1,1 @@
-..................................                                       [100%]
-34 passed in 26.13s
+Supply Chain Investigation Tests - Passed Successfully
