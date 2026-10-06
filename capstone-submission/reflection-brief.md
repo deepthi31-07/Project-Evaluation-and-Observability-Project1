@@ -1,9 +1,12 @@
 # Reflection Brief: Evaluation and Observability Project
 
 ## 1. Policy Routing & Calibration
-- **Passing test count:** 48 passed (from policy pipeline test runs).
-- **Selected record:** POL-2025-002 (spot_check).
-- **Analysis:** High confidence does not equal semantic correctness. Calibration slicing revealed hidden failures, particularly around the umbrella exclusions slice ($n=2$, confidence $0.93$, accuracy $0.00$, Brier $0.865$), demonstrating that deterministic routing and independent review guardrails are necessary when model-expressed confidence fails to track true error rates.
+- Passing test count: 48 passed from policy_pipeline_output.txt.
+- Human-review record: POL-TEST-LOW-CONFIDENCE.
+- Routing decision: human_review.
+- Independent signal that drove review: field-level model confidence for exclusions fell below the threshold, shown by fields_below_threshold = exclusions and reason = exclusions confidence below threshold.
+- Calibration evidence: calibration-report.txt shows umbrella exclusions n=2, conf=0.93, acc=0.00, brier=0.865.
+- Analysis: This demonstrates why high self-rated confidence alone is not enough. Deterministic routing combines confidence, reviewer agreement, and integration checks, so weak independent signals escalate records to human review.
 
 ## 2. Schema-Enforced Two-Pass Extraction
 - **Passing test count:** 25 passed in 0.86s (from `02-mortgage-extraction/evidence/mortgage_extraction_output.txt`).
