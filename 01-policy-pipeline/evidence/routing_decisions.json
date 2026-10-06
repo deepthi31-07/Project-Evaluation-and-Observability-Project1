@@ -1,0 +1,29 @@
+[
+  {
+    "policy_id": "POL-TEST-LOW-CONFIDENCE",
+    "policy_type": "umbrella",
+    "decision": "human_review",
+    "fields_below_threshold": ["exclusions"],
+    "reviewer_disagreements": [],
+    "integration_failures": [],
+    "reason": "exclusions confidence below threshold"
+  },
+  {
+    "policy_id": "POL-2025-001",
+    "policy_type": "auto",
+    "decision": "auto_approve",
+    "fields_below_threshold": [],
+    "reviewer_disagreements": [],
+    "integration_failures": [],
+    "reason": "all fields above threshold"
+  },
+  {
+    "policy_id": "POL-2025-002",
+    "policy_type": "home",
+    "decision": "spot_check",
+    "fields_below_threshold": [],
+    "reviewer_disagreements": ["deductible"],
+    "integration_failures": [],
+    "reason": "reviewer disagreement on deductible"
+  }
+]
