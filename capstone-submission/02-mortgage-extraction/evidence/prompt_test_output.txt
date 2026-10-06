@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.0, pytest-9.1.1, pluggy-1.6.0 -- /opt/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/capstone-submission/02-mortgage-extraction
+configfile: pyproject.toml
+plugins: asyncio-1.4.0, anyio-4.14.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 6 items
+
+tests/test_us03_prompts.py::test_ac_03_01_system_prompt_has_numbered_criteria_with_verbatim_first PASSED [ 16%]
+tests/test_us03_prompts.py::test_ac_03_02_four_contrastive_examples PASSED [ 33%]
+tests/test_us03_prompts.py::test_ac_03_02b_each_example_has_inline_reasoning PASSED [ 50%]
+tests/test_us03_prompts.py::test_ac_03_03_missing_bonus_returns_none PASSED [ 66%]
+tests/test_us03_prompts.py::test_ac_03_04_informal_sqft_normalized_to_integer PASSED [ 83%]
+tests/test_us03_prompts.py::test_ac_03_05_normalization_rules_is_single_referenced_constant PASSED [100%]
+
+============================== 6 passed in 0.87s ===============================

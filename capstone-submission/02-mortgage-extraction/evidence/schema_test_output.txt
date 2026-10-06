@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.0, pytest-9.1.1, pluggy-1.6.0 -- /opt/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/capstone-submission/02-mortgage-extraction
+configfile: pyproject.toml
+plugins: asyncio-1.4.0, anyio-4.14.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+
+tests/test_us01_schema.py::test_ac_01_01_tool_definition_shape PASSED    [ 20%]
+tests/test_us01_schema.py::test_ac_01_02_required_and_optional_fields PASSED [ 40%]
+tests/test_us01_schema.py::test_ac_01_03_enum_other_with_detail_field PASSED [ 60%]
+tests/test_us01_schema.py::test_ac_01_04_at_least_three_nullable_fields PASSED [ 80%]
+tests/test_us01_schema.py::test_ac_01_05_list_nullable_fields_returns_dotted_paths PASSED [100%]
+
+============================== 5 passed in 0.12s ===============================
